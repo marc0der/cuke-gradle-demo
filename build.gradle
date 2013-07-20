@@ -2,16 +2,19 @@ apply plugin: 'groovy'
 
 defaultTasks 'clean', 'test'
 
+test.testLogging.exceptionFormat = 'full'
+
 task wrapper(type: Wrapper) {
     gradleVersion = '1.3'
 }
 
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
 dependencies {
-	groovy group: 'org.codehaus.groovy', name: 'groovy', version: '2.1.5'
+	groovy group: 'org.codehaus.groovy', name: 'groovy', version: '1.8.3'
 	testCompile 'junit:junit:4.11'
 	testCompile 'info.cukes:cucumber-groovy:1.1.1'
 	testCompile 'info.cukes:cucumber-junit:1.1.1'
