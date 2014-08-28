@@ -1,7 +1,5 @@
 build
 .gradle
-gradle/
-gradlew
 .idea
 cuke-gradle.iml
 out
